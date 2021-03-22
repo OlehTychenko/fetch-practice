@@ -79,7 +79,7 @@ PREV.addEventListener('click', () => {
     if (API_RESULT.previous !== null) {
         NEXT.disabled = false;
         PLANETS_WRAPPER.innerHTML = '';
-        let prevLink = `https${(API_RESULT.next).slice(4)}`
+        let prevLink = `https${(API_RESULT.previous).slice(4)}`
         getData(prevLink)
     } else {
         PREV.disabled = true;

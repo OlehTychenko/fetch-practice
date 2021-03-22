@@ -68,7 +68,7 @@ NEXT.addEventListener('click', () => {
     PREV.disabled = false;
     if (API_RESULT.next !== null) {
         PLANETS_WRAPPER.innerHTML = '';
-        getData(API_RESULT.next)
+        getData(`https${API_RESULT.next.slice(4)}`)
     } else {
         NEXT.disabled = true;
     };
@@ -78,7 +78,7 @@ PREV.addEventListener('click', () => {
     if (API_RESULT.previous !== null) {
         NEXT.disabled = false;
         PLANETS_WRAPPER.innerHTML = '';
-        getData(API_RESULT.previous)
+        getData(`https${API_RESULT.previous.slice(4)}`)
     } else {
         PREV.disabled = true;
     };
